@@ -1,0 +1,16 @@
+server:
+  port: 18000
+
+spring:
+  application:
+    name: producer-server
+
+#Eureka setting
+eureka:
+  instance:
+    prefer-ip-address: true #使用ip进行注册
+  client:
+    register-with-eureka: true #是否将自己注册到注册中心上
+    fetch-registry: true #是否从Eureka上获取注册信息
+    service-url:
+      defaultZone: http://192.168.73.128:21000/eureka/,http://192.168.73.129:21000/eureka/,http://192.168.73.130:21000/eureka/
